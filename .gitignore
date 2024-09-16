@@ -1,0 +1,79 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependency directories
+node_modules/
+dist/
+dist-ssr/
+build/
+
+# Ignore local environment files
+*.env.local
+*.env.*.local
+.env
+.env.development.local
+.env.production.local
+.env.test.local
+.env*.local
+
+# Frontend build artifacts
+tinder-ai-frontend/.next/
+tinder-ai-frontend/.nuxt/
+tinder-ai-frontend/out/
+tinder-ai-frontend/build/
+tinder-ai-frontend/dist/
+tinder-ai-frontend/node_modules/
+
+# Backend build artifacts
+tinder-ai-backend/build/
+tinder-ai-backend/dist/
+tinder-ai-backend/target/
+tinder-ai-backend/node_modules/
+
+# Ignore Maven build directory
+target/
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# IDE-specific files
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### Profiles data ###
+profiles.json
+src/main/resources/static/images
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
