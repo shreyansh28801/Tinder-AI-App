@@ -1,65 +1,116 @@
-# Tinder AI App
+# Tinder AI
 
-Welcome to the **Tinder AI App** – a full-stack dating application that combines Spring Boot and React with cutting-edge AI services like GPT-4 and Stable Diffusion to create AI-generated profiles and AI-powered conversations!
+Welcome to the **Tinder AI** app development project! This project showcases a full-stack dating application that combines the familiar swipe-and-match mechanics of dating apps with advanced AI capabilities. You'll experience the integration of AI models to generate dynamic user profiles, images, and conversations.
 
-## Project Overview
+## Table of Contents
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Configuration](#configuration)
+- [Dependencies](#dependencies)
+- [Contributors](#contributors)
+- [License](#license)
 
-This project is designed to simulate the popular swipe-and-match dating app, but with a twist: instead of real users, the app generates fictional profiles using GPT-4 and their corresponding pictures using Stable Diffusion. When users match, they can engage in conversations with AI-driven chatbots, each possessing a unique personality.
+## Introduction
 
-### Key Features:
-- **Spring Boot Backend:** RESTful API with AI integrations.
-- **MongoDB Integration:** NoSQL database for managing profiles.
-- **React Frontend:** Single-page application with state management using React hooks.
-- **AI-Generated Profiles:** GPT-4 generates diverse fictional profiles.
-- **AI-Powered Conversations:** Chatbots powered by GPT-4 based on the generated profiles.
-- **Dynamic Content Generation:** Profile pictures created using Stable Diffusion.
+This project demonstrates how to build a dating app using **Spring Boot** for the backend, **React** for the frontend, and powerful AI models like **GPT-4** / **ollama** and **Stable Diffusion** for content generation. The Tinder AI app showcases:
 
-## Getting Started
+- RESTful API development with **Spring Boot**.
+- **MongoDB** for efficient NoSQL database management.
+- AI-generated profiles and AI-powered conversations using GPT-4.
+- Image generation with **Stable Diffusion**.
+- Interactive user experience with a **React** single-page application (SPA).
 
-### Prerequisites:
-- **Git** for version control
-- **Java 11+** for backend development
-- **Node.js and npm** for frontend development
-- **MongoDB** for data storage
-- **OpenAI API key** for GPT-4 integration
-- **Stable Diffusion model** for image generation
+## Features
+
+- **AI-Generated Profiles**: Fictional user profiles generated with GPT-4.
+- **AI-Powered Conversations**: Users can interact with AI-driven chatbots based on generated profiles.
+- **Dynamic Content Generation**: Profile pictures created using Stable Diffusion.
+- **Full-Stack Architecture**: Backend API development with Spring Boot and MongoDB, and a responsive frontend built with React.
+
+## Installation
 
 ### Step 1: Clone the Repositories
-Clone the frontend and backend repositories:
+
+To get started, clone both the frontend and backend repositories:
+
 ```bash
 git clone https://github.com/koushikkothagal/tinder-ai-backend
 git clone https://github.com/koushikkothagal/tinder-ai-frontend
 ```
 
-## Step 2: Set Up the Profile Data
-- Download the profile bundle from the provided links (choose either men or women profiles).
-- Extract the profile bundle.
-- Copy the `profile.json` file to the root directory of the `tinder-ai-backend` project (alongside files like `README.md` or `pom.xml`).
+### Step 2: Set Up the Profile Data
 
-## Step 3: Set Up the Images
-- Copy all images from the downloaded profile bundle into the `resources/static/images` directory of the `tinder-ai-backend` project.
+1. Download the profile bundle from the provided links (choose either men or women profiles).
+2. Extract the profile bundle.
+3. Copy the `profile.json` file to the root directory of the **tinder-ai-backend** project (alongside files like `README.md` or `pom.xml`).
 
-## Step 4: Update User Details
-- In the `resources/application.properties` file, update the user details under:
-  ```properties
-  tinderai.character.user={id:'__', ... }
+### Step 3: Set Up the Images
 
+Copy all images from the downloaded profile bundle into the `resources/static/images` directory of the **tinder-ai-backend** project.
 
-- Leave the `id` field as is, and modify the other details according to your own profile.
+### Step 4: Update User Details
 
-## Step 5: Configure OpenAI API Key
-- Set your OpenAI API key in the environment variable `SPRING_AI_OPEN_AI_API_KEY`. You can generate an API key from the OpenAI platform if you don’t have one.
+In the `resources/application.properties` file, update the user details under the following key:
 
-## Step 6: Start the Servers
-- Start the backend server by running the Spring Boot application.
-- Start the frontend server by running the React app.
-- Visit the local URL for the React app to start using the Tinder AI app.
+```properties
+tinderai.character.user={id:'user', ... }
+```
 
-## Useful Resources
-- [Java Brains Tutorials: Java Backend Learning Path](https://www.javabrains.io/pages/complete-java-backend-learning-path)
+Leave the id field as is, and modify the other details according to your own profile.
+
+### Step 5: Configure AI Key
+
+#### Option 1: Configure OpenAI API Key
+
+Set your OpenAI API key in the environment variable `SPRING_AI_OPEN_AI_API_KEY`. You can generate an API key from the [OpenAI platform](https://platform.openai.com) if you don’t have one.
+
+#### Option 2: Use Ollama as an OpenAI Alternative
+
+If you don't have an OpenAI API key due to its cost, you can use **Ollama** as an alternative. Ollama is a local AI model runner that supports various AI models, such as **Mistral**.
+
+#### Ollama Configuration
+
+To use Ollama instead of OpenAI, add the following configurations to the `application.properties` file:
+
+```properties
+# Configure the Ollama chat model:
+spring.ai.ollama.base-url=http://localhost:11434
+spring.ai.ollama.chat.options.model=mistral
+spring.ai.ollama.chat.options.temperature=0.7
+```
+
+### Install Ollama Locally
+
+You can install and run **Ollama** locally by following these steps:
+
+1. **Install Ollama**: Visit the [Ollama website](https://ollama.com) to download the installation package for your operating system.
+2. **Run Ollama**: After installation, start the Ollama service with the following command:
+
+    ```bash
+    ollama run
+    ```
+
+    Ensure that Ollama is running on `localhost:11434` as specified in the configuration.
+
+### Step 6: Start the Servers
+
+1. Start the backend server by running the Spring Boot application.
+2. Start the frontend server by running the React app.
+3. Visit the local URL for the React app to start using the Tinder AI app.
+
+### Useful Resources
+
+- [Java Brains Tutorials: Java Backend Learning Path](https://javabrains.io)
 - [Official Spring Boot Documentation](https://spring.io/projects/spring-boot)
-- [Official React Documentation](https://reactjs.org/)
-- [MongoDB Documentation](https://www.mongodb.com/)
+- [Official React Documentation](https://reactjs.org)
+- [MongoDB Documentation](https://docs.mongodb.com)
+- [Ollama Documentation](https://ollama.com)
 
-## License
-This project is licensed under the MIT License.
+## Snaps
+<img width="1440" alt="image" src="https://github.com/user-attachments/assets/4ab4e1e2-0a5d-4c4f-a36b-0de8c7c31ffc">
+<img width="1440" alt="image" src="https://github.com/user-attachments/assets/748f728f-d8b6-4549-8aea-ba1767bd7068">
+<img width="1440" alt="image" src="https://github.com/user-attachments/assets/37f1bab9-5ea4-4d63-b274-f89e2af80775">
+
+
