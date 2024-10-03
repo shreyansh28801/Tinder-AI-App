@@ -109,10 +109,13 @@ You can install and run **Ollama** locally by following these steps:
 - [Ollama Documentation](https://ollama.com)
 
 ## Snaps
+###Profile Selector Screen
 <img width="1440" alt="image" src="https://github.com/user-attachments/assets/4ab4e1e2-0a5d-4c4f-a36b-0de8c7c31ffc">
 
+###User's Matches List Screen
 <img width="1440" alt="image" src="https://github.com/user-attachments/assets/748f728f-d8b6-4549-8aea-ba1767bd7068">
 
+###Chat Screen from selected Match List
 <img width="1440" alt="image" src="https://github.com/user-attachments/assets/37f1bab9-5ea4-4d63-b274-f89e2af80775">
 
 
