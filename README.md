@@ -89,7 +89,7 @@ You can install and run **Ollama** locally by following these steps:
 2. **Run Ollama**: After installation, start the Ollama service with the following command:
 
     ```bash
-    ollama run
+    ollama run mistral
     ```
 
     Ensure that Ollama is running on `localhost:11434` as specified in the configuration.
