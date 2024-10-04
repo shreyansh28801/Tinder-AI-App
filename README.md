@@ -94,6 +94,10 @@ You can install and run **Ollama** locally by following these steps:
 
     Ensure that Ollama is running on `localhost:11434` as specified in the configuration.
 
+## Terminal Screen for Ollama 
+   <img width="1016" alt="image" src="https://github.com/user-attachments/assets/d6948dab-8551-494f-a1f3-f8472a8cf1e2">
+
+
 ### Step 6: Start the Servers
 
 1. Start the backend server by running the Spring Boot application.
